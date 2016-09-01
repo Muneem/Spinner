@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <meta name="viewport" content="width=device-width" />        
+        <style type="text/css">
+
+            .circle-loader {
+                margin-left: 48%;
+                fill: transparent;
+                stroke: #333;
+                stroke-width: 5;
+                animation: dash 2s ease infinite,
+                rotate 2s linear infinite,
+                color 8s linear infinite;
+            }
+
+            @keyframes dash {
+                0% {
+                stroke-dasharray: 1,95;
+                stroke-dashoffset: 0;
+            }
+
+            50% {
+                stroke-dasharray: 85,95;
+                stroke-dashoffset: -25;
+            }
+
+            100% {
+                stroke-dasharray: 85,95;
+                stroke-dashoffset: -93;
+            }
+            }
+
+            @keyframes rotate {
+                0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+            }
+
+            @keyframes color {
+                0% {
+                stroke: #c2463e;
+            }
+
+            24% {
+                stroke: #ea7450;
+            }
+
+            25% {
+                stroke: #f8b232;
+            }
+
+            49% {
+                stroke: #fec764;
+            }
+
+            50% {
+                stroke: #81cf4e;
+            }
+
+            74% {
+                stroke: #c8db5c;
+            }
+
+            75% {
+                stroke: #2496d4;
+            }
+
+            100% {
+                stroke: #66b5e0;
+            }
+            }
+            .loader-container
+            {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -50px;
+                margin-left: -50px;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loader-container">
+            <svg class="circle-loader" width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="15" />
+            </svg>
+        </div>
+    </body>
+    </html>
